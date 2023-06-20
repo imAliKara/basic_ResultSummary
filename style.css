@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.card {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 750px;
+    height: 510px;
+    border-radius: 35px;
+    box-shadow: 2px 2px 19px -2px rgba(0,0,0,0.1);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.card-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 375px;
+    padding: 40px;
+    border-radius: 35px;
+    background-color:hsl(241, 81%, 54%);
+    background: linear-gradient(180deg, rgba(120,87,255,1) 0%, rgba(46,43,233,1) 100%);
+}
+.card-left .result {
+    color: hsl(241, 100%, 89%);
+    font-weight: 700;
+}
+.card-left .left-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin-top: 15px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: rgb(78,33,202);
+    background: linear-gradient(180deg, rgba(78,33,202,1) 0%, rgba(24,21,202,0) 100%);
+}
+.left-circle .score {
+    color: hsl(0, 0%, 100%);
+    font-size: 70px;
+    font-weight: 800;
+    text-shadow: 0px 1px 4px rgba(0,0,0,0.4);
+}
+.left-circle .score-of {
+    color: hsla(241, 100%, 89%, .7);
+    font-size: 18px;
+}
+.card-left .great {
+    color: hsl(0, 0%, 100%);
+    font-size: 32px;
+}
+.card-left .detail {
+    color: hsl(241, 100%, 89%);
+    font-size: 18px;
+    padding: 0 15px 15px 15px;
+    font-weight: 500;
+}
+
+.card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 375px;
+    padding: 40px;
+}
+.card-right > div {
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    border-radius: 12px;
+}
+.card-right .summary {
+    color: hsl(224, 30%, 27%);
+}
+.card-right .reaction {
+    background-color: 	hsl(6, 100%, 98%);
+}
+.card-right .memory {
+    background-color: 	hsl(42, 100%, 97%);
+}
+.card-right .verbal {
+    background-color: 	hsl(180, 44%, 96%);
+}
+.card-right .visual {
+    background-color: 	hsl(240, 71%, 97%);
+}
+.card-right .reaction .title {
+    color: hsl(0, 100%, 67%);
+}
+.card-right .memory .title {
+    color: hsl(39, 100%, 56%);
+}
+.card-right .verbal .title {
+    color: hsl(166, 100%, 37%);
+}
+.card-right .visual .title {
+    color: hsl(234, 85%, 45%);
+}
+.card-right .title {
+    display: flex;
+    align-items: center;
+}
+.card-right .title span {
+    padding-left: 10px;
+}
+.card-right .scores .one {
+    color: hsl(224, 30%, 27%);
+    font-weight: 800;
+}
+.card-right .scores .two {
+    color: #9e9e9e;
+    font-weight: 700;
+}
+.card-right button {
+    border: none;
+    background-color: hsl(224, 30%, 27%);
+    border-radius: 50px;
+    padding: 18px;
+    color: hsl(0, 0%, 100%);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.card-right button:hover {
+    background-color:hsl(241, 81%, 54%);
+    background: linear-gradient(180deg, rgba(120,87,255,1) 0%, rgba(46,43,233,1) 100%);
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        width: 400px;
+        height: 100vh;
+        top: 0;
+        transform: translate(-50%, 0);
+    }
+    .card-left {
+        height: 350px;
+        width: 400px;
+        padding: 30px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .card-left .result {
+        font-size: 18px;
+    }
+    .card-left .left-circle {
+        width: 150px;
+    }
+    .left-circle .score {
+        font-size: 50px;
+    }
+    .left-circle .score-of {
+        font-size: 16px;
+    }
+    .card-left .great {
+        font-size: 24px;
+    }
+    .card-left .detail {
+        font-size: 16px;
+    }
+
+    .card-right {
+        padding: 25px 40px;
+        height: 500px;
+    }
+    .card-right .summary {
+        font-size: 18px;
+    }
+    .card-right .scores .one {
+        font-size: 16px;
+    }
+    .card-right .scores .two {
+        font-size: 16px;
+    }
+    .card-right .title span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        flex-direction: column;
+        width: 375px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+    .card-left {
+        height: 350px;
+        padding: 30px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .card-left .result {
+        font-size: 18px;
+    }
+    .card-left .left-circle {
+        width: 150px;
+    }
+    .left-circle .score {
+        font-size: 50px;
+    }
+    .left-circle .score-of {
+        font-size: 16px;
+    }
+    .card-left .great {
+        font-size: 24px;
+    }
+    .card-left .detail {
+        font-size: 16px;
+    }
+
+    .card-right {
+        padding: 25px 40px;
+        height: 500px;
+    }
+    .card-right .summary {
+        font-size: 18px;
+    }
+    .card-right .scores .one {
+        font-size: 16px;
+    }
+    .card-right .scores .two {
+        font-size: 16px;
+    }
+    .card-right .title span {
+        font-size: 16px;
+    }
+}
